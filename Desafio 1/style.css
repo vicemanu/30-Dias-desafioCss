@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family:'Icons' ;
+    src: url(fontes/Type\ Icons.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Icons';
+    font-size: 3em;
+
+    
+}
+
+.caixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.botão {
+    display: block;
+    display: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-30deg) skew(25deg);
+
+    
+    
+}
+
+span {
+    
+    background-color: cornflowerblue;
+    
+}
