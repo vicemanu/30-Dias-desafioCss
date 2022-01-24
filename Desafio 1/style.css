@@ -1,50 +1,81 @@
 
-@font-face {
-    font-family:'Icons' ;
-    src: url(fontes/Type\ Icons.ttf);
-}
+:root {
 
-* {
-    padding: 0px;
-    margin: 0px;
+    --pinterest: #E60023;
+    --instagram: #e4405f;
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
     height: 100vh;
     display: flex;
-    align-content: center;
     justify-content: center;
-    font-family: 'Icons';
-    font-size: 3em;
+    align-items: center;
+}
 
-    
+.conteiner {
+    display: flex;
 }
 
 .caixa {
-    display: flex;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0px 30px;
+    transform: rotate(-35deg) skew(25deg);
+    background: #ccc;
+}
+
+.caixa span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    display: flex !important;
     align-items: center;
-    justify-content: space-between;
-}
-
-a {
-    color: black;
-    text-decoration: none;
+    justify-content: center;
+    font-size: 30px !important;
+    color: white;
 
 }
 
-.botão {
-    display: block;
-    display: relative;
-    width: 80px;
-    height: 80px;
-    transform: rotate(-30deg) skew(25deg);
-
-    
-    
+.caixa:hover span {
+    box-shadow: -1px 1px 1px rgba(0,0,0,.1);
 }
 
-span {
-    
-    background-color: cornflowerblue;
-    
+.caixa:nth-child(1) span {
+    background-color: var(--pinterest);
 }
+
+.caixa:nth-child(2) span {
+    background-color: black;
+}
+.caixa:nth-child(3) span {
+    background-color: var(--instagram);
+}
+
+.caixa:hover span:nth-child(5) {
+    opacity: 1;
+    transform: translate(40px,-40px);
+}
+
+.caixa:hover span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(30px, -30px);
+}
+.caixa:hover span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(20px,-20px);
+}
+
+.caixa:hover span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(10px,-10px);
+}
+
+.caixa:hover span:nth-child(1) {
+    opacity: 0.2;
+}
+
+
