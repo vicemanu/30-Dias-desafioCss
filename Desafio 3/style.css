@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    overflow: hidden;
+}
+body {
+    margin:  0px;
+    margin: 0px;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    box-sizing: border-box;
+    color: rgb(122, 45, 194);
+    
+}
+
+.texto {
+
+position: absolute;
+top: 50%;
+white-space:nowrap;
+font-size: 12em;
+line-height: 220px;
+animation: texto 20s linear infinite;
+
+
+}
+
+.caixa1 {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(122, 45, 194);
+    border-right: 2px solid #ffffff;
+    color: white;
+    position: absolute;
+    top: 0%;
+}
+
+@keyframes texto {
+    0% {
+        transform: translate(0%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
