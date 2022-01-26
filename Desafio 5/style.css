@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    border: 0px;
+}
+
+body {
+    background-color: black;
+    
+}
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.pulse {
+    background-color: rgb(15, 173, 113);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 100px;
+    animation: pulso 3s linear infinite
+}
+
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(39, 242, 164, 0.7), 0 0 0 0 rgba(39, 242, 164, 0.7);
+    }
+
+    40% {
+        box-shadow: 0 0 0 50px rgba(39, 242, 164, 0), 0 0 0 0px rgba(39, 242, 164, 0.7);
+    }
+
+    80% {
+        box-shadow: 0 0 0 50px rgba(39, 242, 164, 0), 0 0 0 30px rgba(39, 242, 164, 0) ;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(39, 242, 164, 0) ,0 0 0 30px rgba(39, 242, 164, 0) ;
+    }
+
+}
