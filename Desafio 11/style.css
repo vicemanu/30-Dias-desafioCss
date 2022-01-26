@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bnt {
+    border: 4px solid rgb(0, 165, 124);
+    background: none;
+    color: rgb(0, 165, 124);
+    font-size: 2em;
+    padding: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.bnt:hover {
+    color: white;
+}
+
+.bnt::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 165, 124);
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    height: 0%;
+    transition: all 0.5s;
+}
+
+.bnt:hover::before {
+    height: 190%;
+}
