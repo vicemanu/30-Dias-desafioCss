@@ -1,0 +1,35 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    color: rgb(243, 179, 190);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+H1::before {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    content: "desafio12";
+    text-transform: uppercase;
+    color: violet;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+
+h1:hover::before{
+    width: 100%;
+}
