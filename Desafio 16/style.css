@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+h1 {
+    color: white;
+    font-size: 4em;
+    border: 2px solid white;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+h1::before {
+    content: "Feito ✔️";
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    transform: translatey(-100%);
+    transition:all 1.5s;
+
+}
+
+h1:hover::before {
+    transform: translatey(0%);
+
+}
