@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Posicionando cada bolinha */
+
+.brilho {
+    position: relative;
+    min-width: 750px;
+    height: 750;
+    margin: -150px;
+    transform-origin: right;
+    animation: mudançadecor 5s linear infinite;
+
+}
+
+.brilho span {
+    position: absolute;
+    
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+/* --------------------------------------- */
+
+/* Criando a bolinhas */
+
+.brilho span::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+/* ----------------------------------- */ 
+
+
+
+/* Fazendo o movimento de giro e mundando as cores das bolinhas */
+
+@keyframes mudançadecor {
+    0% {
+    filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+} 
+/* ----------------------------------- */ 
+
+
+/* Criando cores diferentes para as bolinhas e criando sombra */
+
+.brilho span:nth-child(3n+1)::before {
+    background-color: rgba(134,255,0,1);;
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+                0 0 40px rgba(134,255,0,1),
+                0 0 60px rgba(134,255,0,1),
+                0 0 80px rgba(134,255,0,1),
+                0 0 8px rgba(136, 255, 0, 0.103);
+    
+}
+
+.brilho span:nth-child(3n+2)::before {
+    background-color: rgba(255,214,0,1);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+                0 0 40px rgba(255,214,0,1),
+                0 0 60px rgba(255,214,0,1),
+                0 0 80px rgba(255,214,0,1),
+                0 0 8px rgba(255, 213, 0, 0.164);
+}
+
+.brilho span:nth-child(3n+3)::before {
+    background-color: rgba(0,226,255,1);
+    box-shadow: 0 0 20px rgba(0,226,255,1),
+                0 0 40px rgba(0,226,255,1),
+                0 0 60px rgba(0,226,255,1),
+                0 0 80px rgba(0,226,255,1),
+                0 0 8px rgba(0, 225, 255, 0.103);
+}
+
+/* ----------------------------------- */ 
+
+/* Criando efeito de animação alternado */
+
+.brilho:nth-child(even)
+{
+    transform-origin: left;
+}
+
+
+.brilho span:nth-child(3n+1) {
+    animation: animação 10s alternate infinite;
+}
+.brilho span:nth-child(3n+2) {
+    animation: animação-inverso 3s alternate infinite;
+}
+.brilho span:nth-child(3n+3) {
+    animation: animação 8s alternate infinite;
+}
+
+@keyframes animação {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animação-inverso {
+    0% {
+        transform: rotate(360deg);
+    }
+    
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ----------------------------------- */ 
+
