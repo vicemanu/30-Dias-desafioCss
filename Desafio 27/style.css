@@ -1,0 +1,45 @@
+body {
+    background-color: #212121;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulso {
+    background-color: #58EA00;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    font-size: 48px;
+    color: white;
+    position: relative;
+}
+
+.pulso::before, .pulso::after {
+    content: " ";
+    border: 2px solid #58EA00;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    border-radius: 50%;
+    animation: pulso 1.5s linear infinite;
+    
+}
+
+.pulso::afte {
+    animation-delay: 0.5s;
+}
+
+@keyframes pulso {
+    0% {transform:scale(0.5);
+    opacity: 0;}
+    50% {transform:scale(1.0);
+    opacity: 1;}
+    100% {transform:scale(1.2);
+    opacity: 0;}
+}

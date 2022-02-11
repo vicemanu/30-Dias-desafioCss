@@ -1,0 +1,133 @@
+body {
+    background-color: #221F1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Fogos { 
+    position: absolute;
+}
+
+.explosao {
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 4px;
+    height: 80px;
+    transform-origin: center bottom;
+    overflow: hidden;
+}
+
+.explosao::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 40px;
+    background-color: rgb(238, 238, 101);
+}
+
+/* Variação dos tamanhos dos fogos e efeito de movimento */
+
+.f1 {
+left: 50%;
+top: 50%;
+transform: scale(1);
+}
+
+.f1 .explosao::before {
+    animation: explosao 2s ease-in-out infinite;
+}
+
+.f2 {
+    left: 40%;
+    top: 40%;
+    transform: scale(0.7);
+    }
+    
+.f2 .explosao::before {
+        animation: explosao 2s 0.6s ease-in-out infinite;
+}
+
+
+.f3 {
+        left: 60%;
+        top: 60%;
+        transform: scale(0.4);
+}
+        
+ .f3 .explosao::before {
+            animation: explosao 2s 0.4s ease-in-out infinite;
+}
+
+@keyframes explosao {
+    0% {
+        top: 100%;
+    }
+    33%, 100% {
+        top: -50%;
+    }
+}
+
+
+/* Reprodução da tira de fogo em formato de circulo */
+
+
+.explosion:nth-child(1)
+{
+    transform: rotate(0deg)
+}
+
+.explosao:nth-child(2) {
+    transform: rotate(30deg);
+}
+.explosao:nth-child(3) {
+    transform: rotate(60deg);
+}
+.explosao:nth-child(4) {
+    transform: rotate(90deg);
+}
+.explosao:nth-child(5) {
+    transform: rotate(120deg);
+}
+.explosao:nth-child(6) {
+    transform: rotate(150deg);
+}
+.explosao:nth-child(7) {
+    transform: rotate(180deg);
+}
+.explosao:nth-child(8) {
+    transform: rotate(210deg);
+}
+.explosao:nth-child(9) {
+    transform: rotate(240deg);
+}
+.explosao:nth-child(10) {
+    transform: rotate(270deg);
+}
+.explosao:nth-child(11) {
+    transform: rotate(300deg);
+}
+.explosao:nth-child(12) {
+    transform: rotate(330deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

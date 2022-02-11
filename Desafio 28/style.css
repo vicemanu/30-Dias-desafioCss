@@ -1,0 +1,28 @@
+body {
+    animation: colorido 30s alternate infinite;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    
+}
+
+h1 {
+    font-size: 5em;
+    color: white;
+}
+
+
+@keyframes colorido {
+    0%{background-color: red;}
+    10%{background-color: coral;}
+    20%{background-color: black;}
+    30%{background-color: cornsilk;}
+    40%{background-color: darkgreen;}
+    50%{background-color: chocolate;}
+    60%{background-color: darkturquoise;}
+    70%{background-color: dimgrey;}
+    80%{background-color: goldenrod;}
+    90%{background-color: violet;}
+    100%{background-color: aqua;}
+}
